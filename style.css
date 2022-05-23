@@ -1,0 +1,147 @@
+/* :root{
+  --main-white: #f0f0f0;
+--main-red: #c91a32;
+--main-blue: #45567d;
+--main-gray: #eee;
+--main-black: #202124;
+--shadow-white: 1px 1px 1px rgba(255,255,255,0.8);
+--shadow-black: 1px 1px 1px rgba(0,0,0,0.8);
+}
+ */
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#bbb;
+}
+
+a{
+    color:#000;
+}
+
+.header{
+    background-color:#fff;
+    box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
+    position:fixed;
+    width:100%;
+    z-index:3;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    background-color:#fff;
+}
+
+.header ul a{
+    display:block;
+    padding:20px;
+    text-decoration:none;
+}
+
+.header ul a:hover{
+   color:red; 
+  
+}
+
+.header .header-img{
+    float:left;
+    display:block;
+    padding:8px 20px;
+    width: 140px;
+}
+
+.header .menu{
+    clear:both;
+    max-height:0;
+    transition:max-height .2s ease-out;
+    text-align: right;
+    font-weight: bold;
+}
+
+.header .menu-icon{
+    padding: 28px 20px;
+    position:relative;
+    float:right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+    background:#333;
+    display:block;
+    height:2px;
+    width:18px;
+    position:relative;
+    transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background:#333;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:5px;  
+
+}
+
+.header .menu-icon .nav-icon:after{
+    background:#333;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:-5px;  
+
+}
+
+.header .menu-btn{
+    display:none;
+}
+
+.header .menu-btn:checked ~ .menu{
+    max-height:300px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background:transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+}
+
+.home{
+  height: 100vh;
+  background: url(https://thenewswheel.com/wp-content/uploads/2019/06/2020_Lexus_RX350_F_SPORT_02_A8E12407641FCF8D1CF03C73528B2F8717C0549B.jpg) no-repeat center center / cover;
+}
+
+
+
+@media (min-width:48em){
+
+    .header li{
+        float:left;
+    }
+    .header li a{
+        padding:20px 30px;
+    }
+    .header .menu{
+        clear:none;
+        float:right;
+        max-height:none;
+    }
+    .header .menu-icon{
+        display:none;
+    }
+
+}
